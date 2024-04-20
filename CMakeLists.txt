@@ -4,10 +4,10 @@ project(base64-codec)
 
 add_subdirectory(doctest)
 
-add_executable(encode-tests encode-tests.cpp)
+add_executable(encode-tests encode-tests.cpp base64-codec.cpp)
 target_link_libraries(encode-tests doctest)
 
-add_executable(decode-tests decode-tests.cpp)
+add_executable(decode-tests decode-tests.cpp base64-codec.cpp)
 target_link_libraries(decode-tests doctest)
 
 enable_testing()
